@@ -1,0 +1,36 @@
+
+T14A4 000:200 SEGGER J-Link V4.68a Log File (0001ms, 0057ms total)
+T14A4 000:200 DLL Compiled: Apr 12 2013 13:26:50 (0001ms, 0057ms total)
+T14A4 000:200 Logging started @ 2016-12-06 21:33 (0001ms, 0057ms total)
+T14A4 000:201 JLINK_SetWarnOutHandler(...) (0000ms, 0057ms total)
+T14A4 000:201 JLINK_OpenEx(...)
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N: 99999998
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFULL  returns O.K. (0020ms, 0077ms total)
+T14A4 000:221 JLINK_SetErrorOutHandler(...) (0000ms, 0077ms total)
+T14A4 000:221 JLINK_ExecCommand("ProjectFile = "K:\Home_Project\MDK Work\TRTOS_STM\MDK4-STM32F10x\JLinkSettings.ini"", ...)  returns 0x00 (0306ms, 0383ms total)
+T14A4 000:528 JLINK_ExecCommand("Device = STM32F103C8", ...)
+                JLINK_AddMirrorAreaEx(Addr = 0x00000000, Size = 0x00000000) (0000ms, 0000ms total)
+              Device "STM32F103C8" selected (64 KB flash, 20 KB RAM).  returns 0x00 (0000ms, 0383ms total)
+T14A4 000:529 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x00 (0000ms, 0384ms total)
+T14A4 000:529 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 0384ms total)
+T14A4 000:529 JLINK_GetDLLVersion()  returns 46801 (0000ms, 0384ms total)
+T14A4 000:529 JLINK_GetFirmwareString(...) (0000ms, 0384ms total)
+T14A4 000:529 JLINK_GetDLLVersion()  returns 46801 (0000ms, 0384ms total)
+T14A4 000:530 JLINK_GetCompileDateTime() (0000ms, 0385ms total)
+T14A4 000:530 JLINK_GetFirmwareString(...) (0000ms, 0385ms total)
+T14A4 000:530 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 0385ms total)
+T14A4 000:530 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0005ms, 0390ms total)
+T14A4 000:535 JLINK_SetSpeed(2000) (0000ms, 0390ms total)
+T14A4 000:537 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 0390ms total)
+T14A4 000:537 JLINK_Reset() >0x108 TIF>Found SWD-DP with ID 0x1BA01477 >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x108 TIF>Found SWD-DP with ID 0x1BA01477 >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF>
+ >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF>
+ >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF>TPIU fitted. >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF>FPUnit: 6 code (BP) slots and 2 literal slots >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF>
+ >0x28 TIF> >0x0D TIF> >0x21 TIF> >0x0D TIF> >0x21 TIF>Found Cortex-M3 r1p1, Little endian. -- CPU is running -- CPU_WriteMem(4 bytes @ 0xE000EDF0) -- CPU is running -- CPU_WriteMem(4 bytes @ 0xE000EDFC) >0x35 TIF> -- CPU is running -- CPU_WriteMem(4 bytes @ 0xE000ED0C) -- CPU is running -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU is running -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU is running -- CPU_WriteMem(4 bytes @ 0xE000EDF0) -- CPU is running -- CPU_WriteMem(4 bytes @ 0xE000EDFC)
+ -- CPU is running -- CPU_ReadMem(4 bytes @ 0xE000EDF0) -- CPU_WriteMem(4 bytes @ 0xE0002000) (0114ms, 0504ms total)
+T14A4 000:651 JLINK_GetId() >0x0D TIF> >0x21 TIF>  returns 0x1BA01477 (0002ms, 0506ms total)
+T14A4 000:656 JLINK_GetFirmwareString(...) (0000ms, 0506ms total)
+T14A4 009:265 JLINK_Close() >0x42 TIF> >0x28 TIF> >0x0D TIF> >0x21 TIF> (0025ms, 0531ms total)
+T14A4 009:290 JLINK_Close() (0000ms, 0531ms total)
+T14A4 009:291 JLINK_Close() (0000ms, 0531ms total)

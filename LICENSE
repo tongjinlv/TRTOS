@@ -1,0 +1,29 @@
+The PacketNgin O/S has beed released under a dual license scheme: GPL and proprietary. 
+For the GPL license, the following exception applies. Proprietary license can be 
+arranged with us. Just send a inquiry to admin@trtos.com to discuss this option.
+
+PacketNgin O/S, the DPI(Deep Packet Inspection) and network virtualization platform.
+
+Copyright (C) 2016 GurunNetworks, Inc.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, CN.
+
+As a special exception, including header files in a file, or linking with
+other files objects to produce an executable application, is merely considered
+normal use of the library, and does *not* fall under the heading of "derived
+work". Therfore does not by itself cause the resulting executable application
+to be covered by the GNU General Public License. This exception does not
+however invalidate any other reasons why the executable file might be covered
+by the GNU Public License.

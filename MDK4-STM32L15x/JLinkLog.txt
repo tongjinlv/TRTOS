@@ -1,0 +1,27 @@
+
+T2970 000:229 SEGGER J-Link V4.68a Log File (0000ms, 0067ms total)
+T2970 000:229 DLL Compiled: Apr 12 2013 13:26:50 (0000ms, 0067ms total)
+T2970 000:229 Logging started @ 2017-01-07 08:50 (0000ms, 0067ms total)
+T2970 000:229 JLINK_SetWarnOutHandler(...) (0000ms, 0067ms total)
+T2970 000:229 JLINK_OpenEx(...)
+Firmware: J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Hardware: V8.00
+S/N: 99999998
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFULL  returns O.K. (0022ms, 0089ms total)
+T2970 000:251 JLINK_SetErrorOutHandler(...) (0000ms, 0089ms total)
+T2970 000:251 JLINK_ExecCommand("ProjectFile = "K:\Home_Project\MDK Work\TRTOS_STM\MDK4-STM32L15x\JLinkSettings.ini"", ...)  returns 0x00 (0001ms, 0090ms total)
+T2970 000:252 JLINK_ExecCommand("Device = STM32L151C8", ...)
+                JLINK_AddMirrorAreaEx(Addr = 0x00000000, Size = 0x00000000) (0000ms, 0000ms total)
+              Device "STM32L151C8" selected (68 KB flash, 10 KB RAM).  returns 0x00 (0000ms, 0090ms total)
+T2970 000:252 JLINK_ExecCommand("DisableConnectionTimeout", ...)  returns 0x00 (0000ms, 0090ms total)
+T2970 000:252 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 0090ms total)
+T2970 000:252 JLINK_GetDLLVersion()  returns 46801 (0000ms, 0090ms total)
+T2970 000:252 JLINK_GetFirmwareString(...) (0000ms, 0090ms total)
+T2970 000:252 JLINK_GetDLLVersion()  returns 46801 (0000ms, 0090ms total)
+T2970 000:252 JLINK_GetCompileDateTime() (0000ms, 0090ms total)
+T2970 000:252 JLINK_GetFirmwareString(...) (0000ms, 0090ms total)
+T2970 000:252 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 0090ms total)
+T2970 000:252 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0002ms, 0092ms total)
+T2970 000:254 JLINK_SetSpeed(2000) (0001ms, 0093ms total)
+T2970 000:256 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 0093ms total)
+T2970 000:256 JLINK_Reset() >0x108 TIF>
