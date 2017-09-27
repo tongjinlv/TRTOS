@@ -1,6 +1,6 @@
 # Installation and development tools
 Default use MDK4.72a
-download:http://www.trtos.com/?p=504
+download:http://www.trtos.com/web/wp/?p=792
 # download the source use git
 Download the compressed package or use the clone git command
 git clone https://github.com/tongjinlv/TRTOS.git
