@@ -25,7 +25,7 @@
                          \_)     
 
 *********************************************************************************/
-#if	  defined(BOARD_LCD4_3)
+#if	defined(BOARD_LCD4_3)
 #include <..\USER\Prj_4.3LCD\Ini.h>
 #elif defined(BOARD_CORE1_0)
 #include <..\USER\Prj_CanBus\Ini.h>
@@ -103,6 +103,8 @@
 #include <..\USER\Prj_USBLora\Ini.h>
 #elif defined(BOARD_AirCleaner)
 #include <..\USER\Prj_AirCleaner\Ini.h>
+#elif defined(BOARD_Lite)
+#include <..\USER\Prj_Lite\Ini.h>
 #else  
 	#error "您首先必须配置好您的项目配置文件Ini.h放置于User目录下"
 #endif

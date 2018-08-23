@@ -95,11 +95,12 @@ ARM Macro Assembler    Page 2
    62 00000048                 END
               00000000 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=..\user\
-prj_minidtu\obj\tos_core_a.d -o..\user\prj_minidtu\obj\tos_core_a.o -IE:\Soft\k
-eil472a\ARM\RV31\INC -IE:\Soft\keil472a\ARM\CMSIS\Include -IE:\Soft\keil472a\AR
-M\Inc\ST\STM32F10x --predefine="__MICROLIB SETA 1" --list=.\list\tos_core_a.lst
- ..\Tos\tos_core_a.asm
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=..\user\prj_insect\obj\tos_core_a.d -o..\user\prj_insect\obj\tos_c
+ore_a.o -I"F:\Program Files\Keil_v5\ARM\RV31\INC" -I"F:\Program Files\Keil_v5\A
+RM\CMSIS\Include" -I"F:\Program Files\Keil_v5\ARM\INC\ST\STM32F10x" --predefine
+="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 525" --list=.\list\tos
+_core_a.lst ..\Tos\tos_core_a.asm
 
 
 
@@ -155,4 +156,4 @@ Symbol: guiNextTaskSp
       At line 51 in file ..\Tos\tos_core_a.asm
 
 2 symbols
-338 symbols in table
+339 symbols in table

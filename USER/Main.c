@@ -95,6 +95,8 @@ http://www.trtos.com/
 #include <..\USER\Prj_USBLora\Lora_main.c>
 #elif defined(BOARD_AirCleaner)
 #include <..\USER\Prj_AirCleaner\AirCleaner_main.c>
+#elif defined(BOARD_Lite)
+#include <..\USER\Prj_Lite\Lite_main.c>
 #else  
 	#error "Missing define: Check Your Project Main.c!"
 #endif
