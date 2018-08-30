@@ -61,7 +61,7 @@ const MUI_MenuStruct *MUI_GetCurMenuInfor()
 	uint8 Length=MUI_OptionLength(MenuValue->CurMenu);
 	return (Menu+Length);
 }
-uint8 MUI_GetKey(uint16 D)
+uint8 MUI_ReadKey(uint16 D)
 {
 	Tos_ArrayMessage *CurMsg;
 	MGUI_KeyMsg *CurKeyMsg;
@@ -248,7 +248,7 @@ void MUI_GetString(uint8 *Str,uint8 Length,uint8 Type)
 		if(Buf[Length]>0x80)Buf[Length]='-';
 		if(Buf[Length-1]<0x80)Buf[Length]=0;
 		Printf_String(&Buf[0],Length,Size,Index);
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Left)if(Index)Index--;
 		if(KeyData==Key_Right)if(Index<(Size-1))Index++;
 		if(Index==(Size-1))if(KeyData==Key_Up|KeyData==Key_Down){StringCoppy(&Buf[0],Str);break;}
@@ -270,7 +270,7 @@ uint32 MUI_GetIP(uint32 Value,uint8 InType)
 	{
 		MUI_SetDrawClear(False);
 		Printf_Data(&Buf[0],Size+1,Index);
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Left)if(Index)Index--;
 		if(KeyData==Key_Right)if(Index<Size)Index++;
 		if(Index==Size)if(KeyData==Key_Up|KeyData==Key_Down){Value=StringToIPUint32(&Buf[0]);break;}
@@ -294,7 +294,7 @@ uint32 MUI_GetColor(uint32 Value,uint8 InType)
 	{
 		MUI_SetDrawClear(False);
 		Printf_Data(&Buf[0],Size+1,Index);
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Left)if(Index)Index--;
 		if(KeyData==Key_Right)if(Index<Size)Index++;
 		if(Index==Size)if(KeyData==Key_Up|KeyData==Key_Down){Buf[11]=0;Value=ALL_TFT(StringToIPUint32(&Buf[0]));break;}
@@ -317,7 +317,7 @@ float MUI_GetValue(float Value,uint8 Size,uint8 InType)
 	{
 		MUI_SetDrawClear(False);
 		Printf_Data(&Buf[0],Size+1,Index);
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Left)if(Index)Index--;
 		if(KeyData==Key_Right)if(Index<Size)Index++;
 		if(Index==Size)if(KeyData==Key_Up|KeyData==Key_Down){Value=GetStringToNumber(&Buf[0]);break;}
@@ -375,7 +375,7 @@ BOOL Printf_Yes(char *Msg)
 			TGUI_Set_Region(0,0,LCD_XSIZE,LCD_YSIZE,Align_CenterCenter);
 			Tos_GetStyleHandle()->SelectTrue=True;
 			Printf("Ok");
-			KeyData=MUI_GetKey(0);
+			KeyData=MUI_ReadKey(0);
 			if(KeyData==Key_Up)break;
 			if(KeyData==Key_Down)break;
 	}
@@ -405,7 +405,7 @@ BOOL Printf_YesOrNo(char *Msg)
 			Tos_GetStyleHandle()->SelectTrue=(BOOL)!i;
 			Printf("No");
 			if(Ov)break;
-			if(!Ov)KeyData=MUI_GetKey(0);
+			if(!Ov)KeyData=MUI_ReadKey(0);
 			if(KeyData==Key_Up)Ov=True;
 			if(KeyData==Key_Down)Ov=True;
 			if(KeyData==Key_Left)i=1;

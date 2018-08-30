@@ -8,6 +8,7 @@ http://www.trtos.com/
 #include <Tools_Include.h>
 #include <..\USER\Prj_Prafire\GBK_Lib.c>
 #include <LCD_Driver.c>
+//#include <Key_driver.c>
 #include <GUI_Include.c>
 #include <TGui_3DCube.c>
 #include <Tos_Mema.h>
@@ -17,8 +18,8 @@ http://www.trtos.com/
 //#include <I2C1_Driver.c>
 #include <..\USER\Prj_Prafire\IO_Driver.c>
 #include <W25Q16_Driver.c>
-#include <..\USER\Prj_Prafire\USB\Usb_All.c>
-#include <..\USER\Prj_Prafire\24L01_Driver.c>
+//#include <..\USER\Prj_Prafire\USB\Usb_All.c>
+//#include <..\USER\Prj_Prafire\24L01_Driver.c>
 #include <..\USER\Prj_Prafire\PageApp.c>
 #include <..\USER\Prj_Prafire\Menu_Base.c>
 //#include <..\USER\Prj_Prafire\App_Prafire.c>
@@ -39,7 +40,11 @@ void Task0(void *Tags)
 	while(1)
 	{
 
+
 		Tos_TaskDelay(100);
+		LED1(OFF);
+		Tos_TaskDelay(100);
+		LED1(ON);
 	}
 }
 
@@ -54,10 +59,9 @@ void Task2(void *Tags)
 
 const TaskInitList TaskList[]={
 {Task0,Null,"Task0",4000},
-{Web_App,Null,"Web_App",2000},
+//{Web_App,Null,"Web_App",2000},
 {MUI_Task,(void *)&MenuHome[0],"MUI_Task",2000},
 {Task2,(void *)&C3D_Default,"CUBE",2000},
-{Task_GetKeyBoardZigbee,(void *)USART2,"Task_GetKeyBoardZigbee",2000},
 {Task_GetKey,Null,"Task_GetKey",2000},
 {Task_Arrary,Null,"Task_Arrary",2000},
 //{Task_SDFAT,Null,"Task_SDFAT",10000},

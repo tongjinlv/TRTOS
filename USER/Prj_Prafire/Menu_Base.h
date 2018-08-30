@@ -107,7 +107,7 @@ void MUI_ReSetTitle(char *Title);
 void MUI_SetDrawClear(uint8 En);
 void MUI_Waiting(char *Title,uint8 D);
 void MUI_Draw(const MUI_MenuStruct *CurMenu);
-uint8 MUI_GetKey(uint16 D);
+uint8 MUI_ReadKey(uint16 D);
 void MUI_Enter(const MUI_MenuStruct *CurMenu);
 uint8 MUI_OptionLength(const MUI_MenuStruct *CurMenu);
 const MUI_MenuStruct *MUI_GetCurMenuInfor(void);

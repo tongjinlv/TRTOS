@@ -132,7 +132,7 @@ void Task_LifePlay()
 						BufferFill(&AppValue->OldBuf[0],0xff,sizeof(AppValue->OldBuf));
 						AppValue->Mode=2;break;
 			case 2:	
-						KeyData=MUI_GetKey(0);
+						KeyData=MUI_ReadKey(0);
 						if(KeyData==Key_Right)if(++AppValue->SelectX>=AppValue->Rank){AppValue->Mode=3;AppValue->SelectY=0x00;}//{AppValue->SelectX=0;if(++AppValue->SelectY>=AppValue->Row)AppValue->SelectY=0;}
 						if(KeyData==Key_Left)if(AppValue->SelectX>0)AppValue->SelectX--;else {AppValue->SelectX=AppValue->Rank-1;if(AppValue->SelectY>0)AppValue->SelectY--;else AppValue->SelectY=AppValue->Row-1;}
 						if(KeyData==Key_Down)if(++AppValue->SelectY>=AppValue->Row){AppValue->SelectY=0;if(++AppValue->SelectX>=AppValue->Rank)AppValue->SelectX=0;}
@@ -141,7 +141,7 @@ void Task_LifePlay()
 						break;
 			case 3:
 						LP_DrawWords(AppValue,AppValue->SelectY);
-						KeyData=MUI_GetKey(0);
+						KeyData=MUI_ReadKey(0);
 						if(KeyData==Key_Up)if(AppValue->SelectY==0)AppValue->SelectY=5;else AppValue->SelectY--;
 						if(KeyData==Key_Down)AppValue->SelectY++;if(AppValue->SelectY>=6)AppValue->SelectY=0;
 						if(KeyData==Key_Left){AppValue->Mode=2;AppValue->SelectX=0x00;AppValue->SelectY=0x00;LP_DrawWords(AppValue,0xff);}
@@ -157,7 +157,7 @@ void Task_LifePlay()
 						if(KeyData)LP_DrawWords(AppValue,AppValue->SelectY);
 						if(!LP_LifePlan(&AppValue->Buf[0],&AppValue->OldBuf[0],AppValue->Row,AppValue->Rank))AppValue->Mode=3;
 						Tos_TaskDelay(120);
-						KeyData=MUI_GetKey(1);
+						KeyData=MUI_ReadKey(1);
 						if(KeyData==Key_Right)AppValue->Mode=3;break;
 			default:break;
 		}

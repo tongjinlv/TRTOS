@@ -134,7 +134,7 @@ void ROM_ReadMap()
 		Flash_ReadData(FLASH_ADDR_BASE+Y++*240+40*Page*240,&P[0],240);
 		Draw_Full_List(&P[0],240,X,0,Color_Red,Color_Blue,Color_Green);
 		}		
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Left)if(Page>0)Page--;
 		if(KeyData==Key_Right)Page++;
 		if(KeyData==Key_Down)break;
@@ -158,7 +158,7 @@ void RAM_ReadMap()
 		Flash_ReadData(0x02000000+Y++*240+40*Page*240,&P[0],240);
 		Draw_Full_List(&P[0],240,X,0,Color_Red,Color_Blue,Color_Green);
 		}		
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Left)if(Page>0)Page--;
 		if(KeyData==Key_Right)Page++;
 		if(KeyData==Key_Down)break;
@@ -182,7 +182,7 @@ void Nand_ReadMap()
 		SPI_FLASH_BufferRead(&P[0],Y++*240+40*Page*240,240);
 		Draw_Full_List(&P[0],240,X,0,Color_Red,Color_Blue,Color_Green);
 		}		
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Left)if(Page>0)Page--;
 		if(KeyData==Key_Right)Page++;
 		if(KeyData==Key_Down)break;
@@ -244,7 +244,7 @@ void MUI_Task(void *Tags)
 		MenuValue->Title=(char *)MUI_GetCurMenuInfor()->Option;
 		MUI_Draw(MenuValue->CurMenu);
 		MenuValue->OptionLength=MUI_OptionLength(MenuValue->CurMenu);
-		KeyData=MUI_GetKey(0);
+		KeyData=MUI_ReadKey(0);
 		if(KeyData==Key_Down)if((MenuValue->OptionLength-1)>MenuValue->DeepRecord[MenuValue->Index])MenuValue->DeepRecord[MenuValue->Index]++;else MenuValue->DeepRecord[MenuValue->Index]=0;
 		if(KeyData==Key_Up)if(MenuValue->DeepRecord[MenuValue->Index])MenuValue->DeepRecord[MenuValue->Index]--;else MenuValue->DeepRecord[MenuValue->Index]=MenuValue->OptionLength-1;
 		if(KeyData==Key_Right)MUI_Enter(MenuValue->CurMenu+MenuValue->DeepRecord[MenuValue->Index]);

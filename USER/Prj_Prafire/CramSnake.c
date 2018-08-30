@@ -275,7 +275,7 @@ void Task_CramSnake()
 						break;
 			case 3://菜单
 						CS_DrawWords(&RunValue,0);
-						KeyData=MUI_GetKey(0);
+						KeyData=MUI_ReadKey(0);
 						if(KeyData==Key_Up)if(RunValue.Index==0)RunValue.Index=5;else RunValue.Index--;
 						if(KeyData==Key_Down)RunValue.Index++;if(RunValue.Index>=6)RunValue.Index=0;
 						if(KeyData==Key_Ctrl){RunValue.Mode=5;RunValue.Index=0;}
@@ -287,7 +287,7 @@ void Task_CramSnake()
 							if(RunValue.Index==2)CS_Load(&RunValue);
 						}break;
 			case 4://运行
-						KeyData=MUI_GetKey(0);
+						KeyData=MUI_ReadKey(0);
 					  if(CS_SnakePlan(&RunValue,KeyData));//{CS_JoinNew(&RunValue);RunValue.Y=0;RunValue.X=0;}//新块
 						if(KeyData==Key_Ctrl)RunValue.Mode=6;break;
 			case 5://游戏初始化
@@ -302,7 +302,7 @@ void Task_CramSnake()
 						CS_DrawWords(&RunValue,S0|S1|S2);break;
 			case 6://游戏暂停
 						CS_DrawWords(&RunValue,S0);
-						KeyData=MUI_GetKey(0);
+						KeyData=MUI_ReadKey(0);
 						if(KeyData==Key_Up)if(RunValue.Index==0)RunValue.Index=5;else RunValue.Index--;
 						if(KeyData==Key_Down)RunValue.Index++;if(RunValue.Index>=6)RunValue.Index=0;
 						if(KeyData==Key_Ctrl){RunValue.Mode=4;RunValue.Index=0;}
