@@ -139,16 +139,14 @@ u8 SPI_SendByte(u8 data,uint8_t cmd)
 {
 	if(cmd)SPI_FLASH_RS_LOW();
 	else SPI_FLASH_RS_HIGH();
-	Tos_TaskDelay(1);
 	while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
   SPI_I2S_SendData(SPI1, data);
-	Tos_TaskDelay(1);
 }
 
 
 void LCD_Init()
 {
-
+	SPI_FLASH_CS_LOW();
 	SPI_SendByte(0xAE,1);   //display off
 	SPI_SendByte(0x20,1);	//Set Memory Addressing Mode	
 	SPI_SendByte(0x10,1);	//00,Horizontal Addressing Mode;01,Vertical Addressing Mode;10,Page Addressing Mode (RESET);11,Invalid
@@ -177,6 +175,7 @@ void LCD_Init()
 	SPI_SendByte(0x8d,1);//--set DC-DC enable
 	SPI_SendByte(0x14,1);//
 	SPI_SendByte(0xaf,1);//--turn on oled panel 
+	SPI_FLASH_CS_HIGH();
 }
 void LCD_Clear(uint16 c)
 {
@@ -192,11 +191,13 @@ void LCD_Clear(uint16 c)
 		  	SPI_SendByte(c,0);
 		}
 	}
+	SPI_FLASH_CS_HIGH();
 }
 void LCD_Show(const uint8_t *Bmp)
 {
 	unsigned char i,j;
 	int z=0;
+	SPI_FLASH_CS_LOW();
 	for(i=0;i<8;i++)
 	{
 		SPI_SendByte(0xb0+i,1);
@@ -207,6 +208,7 @@ void LCD_Show(const uint8_t *Bmp)
 		  	SPI_SendByte(Bmp[z++],0);
 		}
 	}
+	SPI_FLASH_CS_HIGH();
 }
 void DeviceMount_LCD()
 {
