@@ -41,7 +41,7 @@ void Task0(void *Tags)
 		if(x&0x02) Lcd_DrawBMP(120,0,gImage_bb);else Lcd_DrawBMPNull(120,0,gImage_bb);
 	  if(x&0x01)Lcd_DrawBMP(120,120,gImage_bb);else Lcd_DrawBMPNull(120,120,gImage_bb);
 		x++;
-		Tos_TaskDelay(300); 
+		Tos_TaskDelay(1000); 
 		
 	//	
 		

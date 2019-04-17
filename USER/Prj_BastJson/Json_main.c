@@ -30,13 +30,13 @@ void Task0(void *Tags)
 	GPIO_SetAll(0xffff);
 	while(1)
 	{	
-		GPIO_SetIndex(4,0);
+		GPIO_SetIndex(0,0);
 		Tos_TaskDelay(40);
-		GPIO_SetIndex(4,1);
+		GPIO_SetIndex(0,1);
 		Tos_TaskDelay(100);
-	  GPIO_SetIndex(4,0);
+	  GPIO_SetIndex(1,0);
 		Tos_TaskDelay(40);
-		GPIO_SetIndex(4,1);
+		GPIO_SetIndex(1,1);
 		Tos_TaskDelay(1000);
 	}
 }
@@ -65,12 +65,8 @@ const TaskInitList TaskList[]={
 
 const GPIO_InitStruct LED_List[]=
 {
-	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOC,GPIO_Pin_0},
-	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOC,GPIO_Pin_1},
-	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOC,GPIO_Pin_2},
-	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOC,GPIO_Pin_3},
-	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOA,GPIO_Pin_15},
-	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOC,GPIO_Pin_4},
+	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOB,GPIO_Pin_10},
+	{GPIO_Speed_2MHz,GPIO_Mode_Out_PP,GPIOB,GPIO_Pin_11},
 	{0},
 };	
 const GPIO_InitStruct GPIO_List[]=
